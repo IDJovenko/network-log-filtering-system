@@ -1,5 +1,3 @@
-#include "process_stream.hpp"
-
 #include <gtest/gtest.h>
 
 #include <memory>
@@ -11,6 +9,7 @@
 
 #include "IPv4.hpp"
 #include "RangeFilter.hpp"
+#include "ip_log_filter.hpp"  // process_stream declaration
 
 namespace em::ip_log_filter {
 namespace {

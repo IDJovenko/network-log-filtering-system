@@ -1,8 +1,11 @@
+// Here is the implementation of the create_filter function declared in
+// ip_log_filter.hpp.
+
 #include <algorithm>
 #include <stdexcept>
 
 #include "FilterFactory.hpp"
-#include "ip_log_filter.hpp"
+#include "ip_log_filter.hpp"  // create_filter declaration
 
 namespace em::ip_log_filter {
 

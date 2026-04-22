@@ -28,7 +28,6 @@ class IPv4 {
   IPv4& operator>>=(int shift);
 
   auto operator<=>(const IPv4& other) const = default;
-  bool operator==(const IPv4& other) const = default;  // требуется для C++20
 
  private:
   explicit IPv4(uint32_t addr) : addr(addr) {}

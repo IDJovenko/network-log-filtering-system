@@ -1,8 +1,6 @@
 #include "FilterFactory.hpp"
 
-#include <functional>
 #include <stdexcept>
-#include <string>
 #include <unordered_map>
 
 #include "AndFilter.hpp"
@@ -51,9 +49,11 @@ std::unique_ptr<IFilter> FilterFactory::create(
 
   for (const auto& rule : params) {
     auto filter = createConcrete(rule);
-    if (filter) {
-      filters.addFilter(std::move(filter));
+    if (!filter) {
+      throw std::runtime_error("Failed to create \"" + rule.type +
+                               "\" filter with value: \"" + rule.value + "\"");
     }
+    filters.addFilter(std::move(filter));
   }
 
   return std::make_unique<AndFilter>(std::move(filters));

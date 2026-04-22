@@ -1,3 +1,6 @@
+// Here is the implementation of the process_stream function declared in
+// ip_log_filter.hpp.
+
 #include <iostream>
 #include <stdexcept>
 #include <string>
@@ -5,7 +8,7 @@
 #include "IFilter.hpp"
 #include "LogParser.hpp"
 #include "LogWriter.hpp"
-#include "ip_log_filter.hpp"
+#include "ip_log_filter.hpp"  // process_stream declaration
 
 namespace em::ip_log_filter {
 

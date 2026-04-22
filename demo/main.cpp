@@ -1,8 +1,7 @@
 #include <fstream>
 #include <iostream>
 
-#include "create_filter.hpp"
-#include "process_stream.hpp"
+#include "ip_log_filter.hpp"
 
 int main() {
   // Creating a filter (AND combination)
